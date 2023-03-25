@@ -1,34 +1,34 @@
 ## 前言
 
-> 前些日子做了一个pc端[树形表格](https://github.com/Inception-entry/vue-tree-grid)的功能，由于项目需要，移动端也要一个树形展示，虽然很不情愿，个人觉得在移动端做多级树结构不是不合理，操作也不方便，但是没办法，给产品交（si）流（bi）很久还是乖乖去做。
+> 前些日子做了一个pc端[树形表格](https://github.com/Inception-entry/vue-tree-grid)的功能，由于项目需要，移动端也要一个树形展示，虽然很不情愿，个人觉得在移动端做多级树结构不是不合理，操作也不方便，但是没办法，给产品交流很久还是乖乖去做。
+
 #### 主要技术点：`vue子组件的递归实现及相关样式的实现`
 话不多说，先看效果图（[在线预览](https://github.com/Inception-entry/vue-tree-grid/dist/#/mobile)）（数据和树表格是同一个）：
-***
-![](https://user-gold-cdn.xitu.io/2018/8/31/1658eaf2f154a5df?w=474&h=877&f=gif&s=311068)
-***
+
 `注：上面这个iPhoneX效果图是用`[Devices.css](https://picturepan2.github.io/devices.css/)`实现的，模拟手机上显示效果。`
-#### 代码实现
+
+## 代码实现
 
 > tree-list.vue页面负责接收主页面传递的数据，然后将数据通过initTreeData方法组合成树结构需要的格式。
 ```bash
-    initTreeData() {
-      // 临时储存数据
-      let tempData = JSON.parse(JSON.stringify(this.list))
-      let reduceDataFunc = (data, level) => {
-        data.map((m, i) => {
-          m.isExpand = m.isExpand || false
-          m.children = m.children || []
-          m.level = level
-          if (m.children.length > 0) {
-            reduceDataFunc(m.children, level + 1)
-          }
-        })
-      }
-      reduceDataFunc(tempData, 1)
-      this.treeDataSource = tempData
+  initTreeData() {
+    // 临时储存数据
+    let tempData = JSON.parse(JSON.stringify(this.list))
+    let reduceDataFunc = (data, level) => {
+      data.map((m, i) => {
+        m.isExpand = m.isExpand || false
+        m.children = m.children || []
+        m.level = level
+        if (m.children.length > 0) {
+          reduceDataFunc(m.children, level + 1)
+        }
+      })
     }
+    reduceDataFunc(tempData, 1)
+    this.treeDataSource = tempData
+  }
 ```
-> tree.vue子组件用于组件循环嵌套
+> tree-unit.vue子组件用于组件循环嵌套
 ```html
 <template>
   <li class="node list-item" data-type="0">
@@ -85,6 +85,6 @@
   }
 ```
 更多代码请查阅[vue-tree-grid](https://github.com/Inception-entry/vue-tree-grid/blob/master/src/components/h5/mobile.md)，有不懂的可以留言。
-#### 后续扩展
+## 后续扩展
 - 实现下拉刷新，上拉加载更多。
 - 欢迎star，~~~
