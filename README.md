@@ -10,7 +10,7 @@
 - /virtual: 拓展的内部表格数据过多, 是时间分片方式处理的(强烈建议用此方式)
 
 ## 树形表格实现
-- 效果图([Demo](https://inception-entry.github.io/dist/#/))![效果图](https://inception-entry.github.io/dist/20230325_212040.gif)
+- 效果图([Demo](https://inception-entry.github.io/dist/#/))![效果图](./dist/20230325_212040.gif)
 - 主要代码
 > index.vue页面实现业务逻辑代码，比如树表格上面的一些操作按钮的实现及数据获取。
 >
