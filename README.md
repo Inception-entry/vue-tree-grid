@@ -2,12 +2,12 @@
 
 # 前言
 
-> 由于公司产品（基于vue.js）需要，要实现一个[树形表格](https://gitee.com/sanks/vue-tree-grid)的功能，百度、google找了一通，并没有发现很靠谱的，也不是很灵活。所以就用vue自己撸了一个，还望大家多多指教。
+> 由于公司产品（基于vue.js）需要，要实现一个[树形表格](https://github.com/Inception-entry/vue-tree-grid)的功能，百度、google找了一通，并没有发现很靠谱的，也不是很灵活。所以就用vue自己撸了一个，还望大家多多指教。
 #### 主要技术点：`vue子组件的递归实现及相关样式的实现`
 
 ## 树形表格实现
 
-- 效果图([Demo](https://gitee.com/sanks/vue-tree-grid/dist/#/))
+- 效果图([Demo](https://github.com/Inception-entry/vue-tree-grid/dist/#/))
 ![](https://user-gold-cdn.xitu.io/2018/7/24/164cb313dcbb3e95?w=1492&h=998&f=gif&s=1120746)
 - 主要代码
 > index.vue页面实现业务逻辑代码，比如树表格上面的一些操作按钮的实现及数据获取。
@@ -112,12 +112,12 @@ export default {
 	</div>
 </template>
 ```
-首先这里的子组件`tree-unit`没有在页面上有引入，但是也可以正常使用。这里就是关健点，因为这个子组件是需要递归实现，所以，需要动态注册到当前组件中。代码如下（由于代码太多，先贴图说明吧，[点击这里](https://gitee.com/sanks/vue-tree-grid/blob/master/src/components/tree-grid.vue)可以看源码）：
+首先这里的子组件`tree-unit`没有在页面上有引入，但是也可以正常使用。这里就是关健点，因为这个子组件是需要递归实现，所以，需要动态注册到当前组件中。代码如下（由于代码太多，先贴图说明吧，[点击这里](https://github.com/Inception-entry/vue-tree-grid/blob/master/src/components/tree-grid.vue)可以看源码）：
 
 ![](https://user-gold-cdn.xitu.io/2018/7/24/164cb5dddee5b208?w=672&h=862&f=png&s=48872)
 
 这里子组件看起来是不是挺奇怪的，但是为了递归他本身，暂时也只想到这种办法。如果有更好的办法，欢迎留言指正。<br>
-那么，树表格的结构实现在哪里呢？？对，就是在子组件的模版(`template`)里面，这里就不贴代码了，可以移步到[源码](https://gitee.com/sanks/vue-tree-grid/blob/master/src/components/tree-grid.vue)查看。<br>
+那么，树表格的结构实现在哪里呢？？对，就是在子组件的模版(`template`)里面，这里就不贴代码了，可以移步到[源码](https://github.com/Inception-entry/vue-tree-grid/blob/master/src/components/tree-grid.vue)查看。<br>
 - 感谢
 > 收到[favourli](https://juejin.im/user/5b0d3e2d5188251558575c17)的指正，现已将原有写法更新,采用[递归组件](https://cn.vuejs.org/v2/guide/components-edge-cases.html#%E7%BB%84%E4%BB%B6%E4%B9%8B%E9%97%B4%E7%9A%84%E5%BE%AA%E7%8E%AF%E5%BC%95%E7%94%A8)来实现，这样页面看起来就更清晰。
 ``` html
@@ -130,7 +130,7 @@ export default {
 
 最后，此篇乃我的开篇之作，如有问题，还请多多包含，多多指教！！！顺便给我好久没有更新的博客打个广告,
 欢迎点击（[<span style="color:#f24c27;font-weight:600">sanks的博客</span>](https://www.sanks-blog.com/)）
-- 源码地址[github](https://gitee.com/sanks/vue-tree-grid)，欢迎star。
+- 源码地址[github](https://github.com/Inception-entry/vue-tree-grid)，欢迎star。
 > 参考资源[隔壁家的老黄](https://www.cnblogs.com/ychl/p/6075106.html)
 > 参考资源[城池](https://juejin.cn/post/6844903645624926215)
 

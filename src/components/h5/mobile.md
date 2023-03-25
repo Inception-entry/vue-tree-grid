@@ -1,8 +1,8 @@
 ## 前言
 
-> 前些日子做了一个pc端[树形表格](https://gitee.com/sanks/vue-tree-grid)的功能，由于项目需要，移动端也要一个树形展示，虽然很不情愿，个人觉得在移动端做多级树结构不是不合理，操作也不方便，但是没办法，给产品交（si）流（bi）很久还是乖乖去做。
+> 前些日子做了一个pc端[树形表格](https://github.com/Inception-entry/vue-tree-grid)的功能，由于项目需要，移动端也要一个树形展示，虽然很不情愿，个人觉得在移动端做多级树结构不是不合理，操作也不方便，但是没办法，给产品交（si）流（bi）很久还是乖乖去做。
 #### 主要技术点：`vue子组件的递归实现及相关样式的实现`
-话不多说，先看效果图（[在线预览](https://gitee.com/sanks/vue-tree-grid/dist/#/mobile)）（数据和树表格是同一个）：
+话不多说，先看效果图（[在线预览](https://github.com/Inception-entry/vue-tree-grid/dist/#/mobile)）（数据和树表格是同一个）：
 ***
 ![](https://user-gold-cdn.xitu.io/2018/8/31/1658eaf2f154a5df?w=474&h=877&f=gif&s=311068)
 ***
@@ -84,7 +84,7 @@
     }
   }
 ```
-更多代码请查阅[vue-tree-grid](https://gitee.com/sanks/vue-tree-table/blob/master/src/components/h5/mobile.md)，有不懂的可以留言。
+更多代码请查阅[vue-tree-grid](https://github.com/Inception-entry/vue-tree-grid/blob/master/src/components/h5/mobile.md)，有不懂的可以留言。
 #### 后续扩展
 - 实现下拉刷新，上拉加载更多。
 - 欢迎star，~~~
