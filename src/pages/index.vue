@@ -58,7 +58,7 @@
   </div>
 </template>
 <script>
-import dataJson from './data.json'
+import dataJson from './data2.json'
 import treeGrid from '@/components/pc/tree-grid.vue'
 export default {
   data() {

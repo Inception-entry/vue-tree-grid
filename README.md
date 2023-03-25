@@ -115,6 +115,7 @@ export default {
 </template>
 ```
 首先这里的子组件`tree-unit`没有在页面上有引入，但是也可以正常使用。这里就是关健点，因为这个子组件是需要递归实现，所以，需要动态注册到当前组件中。代码如下（由于代码太多，先贴图说明吧，[点击这里](https://github.com/Inception-entry/vue-tree-grid/blob/master/src/components/tree-grid.vue)可以看源码）：
+![]()
 
 这里子组件看起来是不是挺奇怪的，但是为了递归他本身，暂时也只想到这种办法。如果有更好的办法，欢迎留言指正。<br>
 那么，树表格的结构实现在哪里呢？？对，就是在子组件的模版(`template`)里面，这里就不贴代码了，可以移步到[源码](https://github.com/Inception-entry/vue-tree-grid/blob/master/src/components/tree-grid.vue)查看。<br>
