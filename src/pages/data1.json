@@ -1,0 +1,158 @@
+[
+    {
+        "org_id": "d9cbe04a-6973-4acd-bd3a-e938d5b091dd",
+        "org_name": "黑白公司",
+        "sub_account_total": 8,
+        "sub_account_list": [
+        {
+            "sub_account_user_id": "0b7823a4-7856-4269-9760-ff5c1edac668",
+            "sub_account_user_name": "linshaoqiang66",
+            "sub_account_display_name": "linshaoqiang66",
+            "sub_account_relation_status": 1,
+            "sub_account_relation_time": 1664440928000,
+            "org_id": "d9cbe04a-6973-4acd-bd3a-e938d5b091dd",
+            "org_name": "黑白公司",
+            "role": "sub"
+        },
+        {
+            "sub_account_user_id": "7a43fd3d-9897-461e-b493-a63d861857e0",
+            "sub_account_user_name": "r12640",
+            "sub_account_display_name": "12640",
+            "sub_account_relation_status": 1,
+            "sub_account_relation_time": 1666078277000,
+            "org_id": "d9cbe04a-6973-4acd-bd3a-e938d5b091dd",
+            "org_name": "黑白公司",
+            "role": "sub"
+        },
+        {
+            "sub_account_user_id": "f39ca23b-133a-48aa-9d7e-c8db4d922168",
+            "sub_account_user_name": "testlyy11111111111111111111111",
+            "sub_account_display_name": "r123123",
+            "sub_account_relation_status": 1,
+            "sub_account_relation_time": 1658301905000,
+            "org_id": "d9cbe04a-6973-4acd-bd3a-e938d5b091dd",
+            "org_name": "黑白公司",
+            "role": "sub"
+        },
+        {
+            "sub_account_user_id": "1995a3ee-654f-4775-a63d-24eedfab7cc9",
+            "sub_account_user_name": "xioahahha",
+            "sub_account_display_name": "xioahahha",
+            "sub_account_relation_status": 1,
+            "sub_account_relation_time": 1656296289000,
+            "org_id": "d9cbe04a-6973-4acd-bd3a-e938d5b091dd",
+            "org_name": "黑白公司",
+            "role": "sub"
+        },
+        {
+            "sub_account_user_id": "86a28127-f9b4-4721-be65-c5b1350bc99a",
+            "sub_account_user_name": "zx3344",
+            "sub_account_display_name": "zx3344",
+            "sub_account_relation_status": 1,
+            "sub_account_relation_time": 1657072940000,
+            "org_id": "d9cbe04a-6973-4acd-bd3a-e938d5b091dd",
+            "org_name": "黑白公司",
+            "role": "sub"
+        },
+        {
+            "sub_account_user_id": "230c2ac3-607e-4cef-9a73-9df1a1acda1c",
+            "sub_account_user_name": "zx9988",
+            "sub_account_display_name": "zx9988",
+            "sub_account_relation_status": 1,
+            "sub_account_relation_time": 1657073076000,
+            "org_id": "d9cbe04a-6973-4acd-bd3a-e938d5b091dd",
+            "org_name": "黑白公司",
+            "role": "sub"
+        },
+        {
+            "sub_account_user_id": "8cb442c8-9627-4fd3-97e3-07a97c50eedc",
+            "sub_account_user_name": "zxtest331",
+            "sub_account_display_name": "zxtest331",
+            "sub_account_relation_status": 1,
+            "sub_account_relation_time": 1653879501000,
+            "org_id": "d9cbe04a-6973-4acd-bd3a-e938d5b091dd",
+            "org_name": "黑白公司",
+            "role": "sub"
+        },
+        {
+            "sub_account_user_id": "5c36172d-3991-40db-be2a-83924e83ccb0",
+            "sub_account_user_name": "zxtest332",
+            "sub_account_display_name": "ssssssssssssssssssss",
+            "sub_account_relation_status": 1,
+            "sub_account_relation_time": 1665560605000,
+            "org_id": "d9cbe04a-6973-4acd-bd3a-e938d5b091dd",
+            "org_name": "黑白公司",
+            "role": "sub"
+        }],
+        "children": [
+        {
+            "org_id": "6ca0799b-9b73-4b8f-9f0e-fbf6038880ec",
+            "org_name": "1的的顶顶顶顶顶顶顶顶顶顶的顶顶顶顶顶顶顶顶顶顶顶顶顶顶顶dddd2",
+            "sub_account_total": 0,
+            "sub_account_list": [],
+            "children": []
+        },
+        {
+            "org_id": "191f638f-0f92-47f1-8a72-9f1163130c09",
+            "org_name": "ddd",
+            "sub_account_total": 0,
+            "sub_account_list": [],
+            "children": []
+        },
+        {
+            "org_id": "d1e26ad2-d110-4b6a-a418-3cba8dfb2f56",
+            "org_name": "方法反反复复付付付付oooooo付付付付付付付8付付付付付付付付付孤寡孤寡孤寡过过过过过过过过过过",
+            "sub_account_total": 0,
+            "sub_account_list": [],
+            "children": []
+        },
+        {
+            "org_id": "c1ab7200-6a8e-4931-84b6-fb6fcc39f68a",
+            "org_name": "卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔",
+            "sub_account_total": 2,
+            "sub_account_list": [
+            {
+                "sub_account_user_id": "f6f4e768-606a-46b1-9594-e9c934b1b55d",
+                "sub_account_user_name": "34fertrtr",
+                "sub_account_display_name": "ddd语言呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀呀晕晕晕晕晕晕晕晕晕晕晕晕晕晕晕",
+                "sub_account_relation_status": 1,
+                "sub_account_relation_time": 1656296772000,
+                "org_id": "c1ab7200-6a8e-4931-84b6-fb6fcc39f68a",
+                "org_name": "卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔",
+                "role": "sub"
+            },
+            {
+                "sub_account_user_id": "94c53c14-6e29-4ef8-8354-570717ecbb16",
+                "sub_account_user_name": "zx0099",
+                "sub_account_display_name": "zx0099",
+                "sub_account_relation_status": 1,
+                "sub_account_relation_time": 1657073763000,
+                "org_id": "c1ab7200-6a8e-4931-84b6-fb6fcc39f68a",
+                "org_name": "卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔尔卡塔",
+                "role": "sub"
+            }],
+            "children": [
+            {
+                "org_id": "85664c65-40de-4adb-aa09-fa13437c4aba",
+                "org_name": "立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛立陶宛",
+                "sub_account_total": 0,
+                "sub_account_list": [],
+                "children": [
+                {
+                    "org_id": "ef97b52e-14ec-491a-9ca5-146bde073ffe",
+                    "org_name": "阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷阿根廷",
+                    "sub_account_total": 0,
+                    "sub_account_list": [],
+                    "children": [
+                    {
+                        "org_id": "f967f6cc-ba2d-4d3e-9284-a6581b906649",
+                        "org_name": "葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄牙葡萄",
+                        "sub_account_total": 0,
+                        "sub_account_list": [],
+                        "children": []
+                    }]
+                }]
+            }]
+        }]
+    }
+ ]
