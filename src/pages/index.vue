@@ -1,5 +1,5 @@
 <template>
-  <div class="omc-common-css contains">
+  <div class="common-css contains">
     <tree-grid
       ref="recTree"
       :list.sync="treeDataSource"
@@ -58,8 +58,8 @@
   </div>
 </template>
 <script>
-import dataJson from './data2.json'
-import treeGrid from '@/components/pc/tree-grid.vue'
+import dataJson from './data1.json';
+import treeGrid from '@/components/pc/tree-grid.vue';
 export default {
   data() {
     return {

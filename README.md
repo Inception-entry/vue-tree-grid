@@ -10,26 +10,36 @@
 - /virtual: 拓展的内部表格数据过多, 是虚拟列表方式处理的(强烈建议用此方式)
 
 ## 树形表格实现
-- 效果图([Demo](https://inception-entry.github.io/dist/#/))![效果图](./dist/20230325_212040.gif)
+- 效果图([Demo](https://inception-entry.github.io/dist/#/))![效果图](https://inception-entry.github.io/dist/20230328_202702.gif)
 - 主要代码
 > index.vue页面实现业务逻辑代码，比如树表格上面的一些操作按钮的实现及数据获取。
 >
 ``` html
 <template>
-  <div class="contains">
-    <h1>树表格实现</h1>
-    <tree-grid ref="recTree"
-    :list.sync="treeDataSource"
-    @handlerFold="handlerFold"
-    @handlerExpand="handlerExpand"></tree-grid>
+  <div class="common-css contains">
+    <tree-grid
+      ref="recTree"
+      :list.sync="treeDataSource"
+      @handlerFold="handlerFold"
+      @handlerExpand="handlerExpand"
+      :treeColumnList="treeColumns"
+			:columnList="tableColumns"
+      :tableListName="childrenAlias">
+    >
+      ...代码省略...
+    </tree-grid>
   </div>
 </template>
 <script>
-import treeGrid from '@/components/tree-grid.vue'
+import dataJson from './data1.json';
+import treeGrid from '@/components/pc/tree-grid.vue';
 export default {
   data() {
     return {
-      list: [], // 请求原始数据
+      treeDataSource: dataJson,
+      treeColumns: [], // 树表头
+      tableColumns: [],// 内部表格表头
+      childrenAlias: 'sub_account_list',
       treeDataSource: [] // 组合成树表格接收的数据
     }
   },
@@ -84,42 +94,48 @@ export default {
 		<div class="tree-head">
 			<table>
 				<tr>
-					<td class="td1">组织名称</td>
-					<td class="td2">子账号数量(个)</td>
-					<td class="td3">操作</td>
+					<th
+            :class="`th${index + 1}`"
+            :style="treeHeaderRender(item, index, treeColumnList)"
+            v-for="(item, index) in treeColumnList"
+            :key="item.key"
+          >
+            {{ item.name }}
+          </th>
 				</tr>
 			</table>
 		</div>
 		<div id="scrollWrap" class="tree-wrap">
 			<div class="tree-body">
-				<table v-if='treeDataSource.length>0'>
-					<tbody>
-						<tr>
-							<td>
-								<tree-unit
-									v-for="(model,i) in treeDataSource"
-                  :key="'root_node_'+i"
-									:root="0"
-									:num="i"
-									:nodes="treeDataSource.length"
-									:trees.sync="treeDataSource"
-									:model.sync="model">
-								</tree-unit>
-							</td>
-						</tr>
-					</tbody>
-				</table>
+				<table v-if="treeDataSource.length > 0">
+          <tbody>
+            <tr>
+              <td>
+                <tree-unit
+                  v-for="(model, i) in treeDataSource"
+                  :key="'root_node_' + i"
+                  :root="0"
+                  :num="i"
+                  @handlerFold="handlerFold"
+                  @handlerExpand="handlerExpand"
+                  :nodes="treeDataSource.length"
+                  :trees.sync="treeDataSource"
+                  :model="model"
+                  :treeColumnList="treeColumnList"
+                  :columnList="columnList"
+                  :tableListName="tableListName"
+                >
+                ...代码省略...
+                </tree-unit>
+              </td>
+            </tr>
+          </tbody>
+        </table>
 			</div>
 		</div>
 	</div>
 </template>
 ```
-首先这里的子组件`tree-unit`没有在页面上有引入，但是也可以正常使用。这里就是关健点，因为这个子组件是需要递归实现，所以，需要动态注册到当前组件中。代码如下（由于代码太多，先贴图说明吧，[点击这里](https://github.com/Inception-entry/vue-tree-grid/blob/master/src/components/tree-grid.vue)可以看源码）：
-![](https://inception-entry.github.io/dist/nest.png)
-
-这里子组件看起来是不是挺奇怪的，但是为了递归他本身，暂时也只想到这种办法。如果有更好的办法，欢迎留言指正。<br>
-那么，树表格的结构实现在哪里呢？？对，就是在子组件的模版(`template`)里面，这里就不贴代码了，可以移步到[源码](https://github.com/Inception-entry/vue-tree-grid/blob/master/src/components/tree-grid.vue)查看。<br>
-
 > 补充一点：不要只看js部分，css部分才是这个树表格的关健所在。当然里面我采用了大量的计算属性去判断各种样式的展示，还有一种方法，就是在`initTreeData`方法里面去实现，这个方法就是处理或添加一些我们树表格所使用的信息。比如我现在在里面实现的层级线的偏移量`m.bLeft = level === 1 ? 65 : (level - 2) * 14 + 65` 这个计算如果没有看明白，可以留言。
 
 最后，如有问题，还请多多包含，多多指教！！！顺便给我好久没有更新的博客打个广告,
