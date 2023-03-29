@@ -1,6 +1,6 @@
 {
   "name": "tree-grid-component",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "基于vue.js的树形表格。",
   "main": "index.js",
   "bugs": "https://github.com/Inception-entry/vue-tree-grid/issues",
