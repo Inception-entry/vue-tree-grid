@@ -2,11 +2,11 @@
 
 ## 前言
 > 由于公司产品（基于vue.js）需要，要实现一个[树形表格](https://github.com/Inception-entry/vue-tree-grid)的功能，百度、google找了一通，并没有发现很靠谱的，也不是很灵活。所以就用vue自己写了一个，还望大家多多指教。
+- <span style="color:#f24c27;font-weight:600">注意：鉴于本组件包含样式和布局等，而且对于需要此组件的你来说，需要定制化调整，故而没有打包成npm下载，可直接引入的形式，因为没有太大的实际意义，人生有限，不要把时间浪费在无意义的事情上。</span>
 #### 主要技术点：`vue子组件的递归实现及相关样式的实现`
 
 ## 路由讲解
 - 根路由：拓展的内部表格数据过多, 是时间分片方式处理的
-- /mobile: 手机上的树形表格
 - /virtual: 拓展的内部表格数据过多, 是虚拟列表方式处理的(强烈建议用此方式)
 
 ## 树形表格实现
@@ -25,14 +25,13 @@
       :treeColumnList="treeColumns"
 			:columnList="tableColumns"
       :tableListName="childrenAlias">
-    >
       ...代码省略...
     </tree-grid>
   </div>
 </template>
 <script>
 import dataJson from './data1.json';
-import treeGrid from '@/components/pc/tree-grid.vue';
+import treeGrid from '@/components/tree-grid.vue';
 export default {
   data() {
     return {
@@ -123,8 +122,7 @@ export default {
                   :model="model"
                   :treeColumnList="treeColumnList"
                   :columnList="columnList"
-                  :tableListName="tableListName"
-                >
+                  :tableListName="tableListName">
                 ...代码省略...
                 </tree-unit>
               </td>

@@ -11,11 +11,6 @@ export default new Router({
       component:  resolve => require.ensure([], () => resolve(require('@/pages/index.vue')), 'index')
     },
     {
-      path: '/mobile',
-      name: 'mobile',
-      component:  resolve => require.ensure([], () => resolve(require('@/pages/mobile.vue')), 'mobile')
-    },
-    {
       path: '/virtual',
       name: 'virtual',
       component:  resolve => require.ensure([], () => resolve(require('@/pages/virtual.vue')), 'virtual')

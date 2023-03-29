@@ -8,7 +8,6 @@
       :treeColumnList="treeColumns"
 			:columnList="tableColumns"
       :tableListName="childrenAlias">
-    >
       <template v-slot:mainAccount>
         <i class="tree-account">
           【主账号: SPgmdd】
@@ -59,7 +58,7 @@
 </template>
 <script>
 import dataJson from './data1.json';
-import treeGrid from '@/components/pc/tree-grid.vue';
+import treeGrid from '@/components/tree-grid.vue';
 export default {
   data() {
     return {

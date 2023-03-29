@@ -1,6 +1,6 @@
 {
   "name": "tree-grid-component",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "基于vue.js的树形表格。",
   "main": "index.js",
   "bugs": "https://github.com/Inception-entry/vue-tree-grid/issues",
@@ -68,8 +68,8 @@
     "webpack-merge": "^4.1.0"
   },
   "engines": {
-    "node": ">= 12.0.0",
-    "npm": ">= 7.0.0"
+    "node": ">= 14.17.5",
+    "npm": ">= 6.14.14"
   },
   "browserslist": [
     "> 1%",
