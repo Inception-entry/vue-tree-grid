@@ -142,7 +142,7 @@ export default {
     //   dataArr.map((pNode, i) => {
     //     let childObj = []
     //     list.map((cNode, j) => {
-    //       if (pNode.Id === cNode.parentId) {
+    //       if (pNode.id === cNode.parentId) {
     //         childObj.push(cNode)
     //       }
     //     })

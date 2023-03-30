@@ -113,7 +113,7 @@ import treeUnit from './tree-unit.vue';
 						m.children = m.children || []
 						m.level = level
 						m.bLeft = level === 1 ? 65 : (level - 2) * 14 + 65
-						m.Experience = m.Experience || '无'
+
 						if (m.children.length > 0) {
 							reduceDataFunc(m.children, level + 1)
 						}

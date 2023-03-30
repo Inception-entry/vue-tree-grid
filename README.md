@@ -2,9 +2,10 @@
 
 ## 前言
 > 由于公司产品（基于vue2.0）需要，要实现一个[树形表格](https://github.com/Inception-entry/vue-tree-grid)的功能，百度、google找了一通，并没有发现很靠谱的，也不是很灵活。所以就用vue自己写了一个，还望大家多多指教。
-#### 注意：鉴于本组件包含样式和布局等，而且对于需要此组件的你来说，需要定制化调整，故而没有打包成npm下载可直接引入的形式，因为没有太大的实际意义，人生有限，不要把时间浪费在无意义的事情上。请自行下载并手动引入组件，并修改成你想要的样子。[传送门](https://github.com/Inception-entry/vue-tree-grid)
 
-#### 主要技术点：`vue子组件的递归实现及相关样式的实现`
+### 注意：鉴于本组件包含样式和布局等，而且对于需要此组件的你来说，需要定制化调整，故而没有打包成npm下载可直接引入的形式，因为没有太大的实际意义，人生有限，不要把时间浪费在无意义的事情上。请自行下载并手动引入组件，并修改成你想要的样子。[传送门](https://github.com/Inception-entry/vue-tree-grid)
+
+### 主要技术点：`vue子组件的递归实现及相关样式的实现`
 
 ## 路由讲解
 - 根路由：拓展的内部表格数据过多, 是时间分片方式处理的
@@ -57,10 +58,11 @@ export default {
 </script>
 ```
 ``` bash
-原始数据`list`：是不包含子数据的数据结构，即没有层级结构，例如：
-[{id:111,parentId:0,name:'父及'},{id:111,parentId:111,name:'子级'}...]，通过parentId来获取对应父子层级结构
+原始数据`list`：是不包含子数据的数据结构，即没有层级结构，通过parentId来获取对应父子层级结构，例如：
+[{id:111,parentId:0,name:'父级'},{id:111,parentId:111,name:'子级'}...]
+
 `treeDataSource`：是树表格需要的数据结构，例如：
-[{id:0,name:'父及',children:[{id:10,name:'子级',children:[]}]},...]
+[{id:0,name:'父级',children:[{id:10,name:'子级',children:[]}]},...]
 ```
 > 如果后台返回给你的是原始数据格式，就可以用下面方法封装成树表格可以使用的数据结构：
 ``` bash
@@ -74,7 +76,7 @@ export default {
     dataArr.map((pNode, i) => {
       let childObj = []
       list.map((cNode, j) => {
-        if (pNode.Id === cNode.parentId) {
+        if (pNode.id === cNode.parentId) {
           childObj.push(cNode)
         }
       })
@@ -132,9 +134,43 @@ export default {
 	</div>
 </template>
 ```
+
+## API
+
+### Table Attributes
+
+| 属性 | 说明 | 类型 | 参数 | 默认值 |
+| ---- | ---- | ---- | ---- | ---- |
+| list | 树表格需要的数据结构 | Array | - | [] |
+| treeColumnList | 树表格的最外层表头 | Array | - | [] |
+| columnList | 内部表格表头（具体见下文：Columns Configs） | Array | - | [] |
+| tableListName | 树表格结构中内部表格的属性名 | String | - | '' |
+
+
+### Columns Configs
+
+| 属性 | 说明 | 类型 | 默认值 |
+| ---- | ---- | ---- | ---- |
+| key | 列唯一标识 | Number | 无 |
+| name | 列标题名称 | String | '' |
+| fieldName | 对应列内容的属性名 | String | '' |
+| minWidth | 列最小宽度 |  Number | 无 |
+| maxWidth | 列最大宽度 | Number | 无 |
+| expandFunc | 是否有拓展功能 | Boolean | false |
+| mainAccountSlotName | 列类型为复杂结构时，对应的主账号插槽名称 | String | '' |
+| slotName | 列类型为 'template'(自定义列模板) 时，对应的插槽名称（它可以获取到 row）[作用域插槽] | Object | {} |
+
+### Table Events
+
+| 事件名 | 说明 | 参数 |
+| ---- | ---- | ---- |
+| handlerFold | 鼠标单击树形icon | row |
+| handlerExpand | 鼠标单击展开单元格 | row |
+
+
 > 补充一点：不要只看js部分，css部分才是这个树表格的关健所在。当然里面我采用了大量的计算属性去判断各种样式的展示，还有一种方法，就是在`initTreeData`方法里面去实现，这个方法就是处理或添加一些我们树表格所使用的信息。比如我现在在里面实现的层级线的偏移量`m.bLeft = level === 1 ? 65 : (level - 2) * 14 + 65` 这个计算如果没有看明白，可以留言。
 
-> 最后，如有问题，还请多多包含，多多指教！！！顺便给我好久没有更新的博客打个广告,
+- 最后，如有问题，还请多多包含，多多指教！！！顺便给我好久没有更新的博客打个广告,
 欢迎点击（[<span style="color:#f24c27;font-weight:600">sanks的博客</span>](https://www.sanks-blog.com/)）
 
 ## 参考资料

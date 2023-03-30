@@ -172,7 +172,7 @@ export default {
       let btnBackground = {
         "padding-top": "20px",
         "padding-bottom": "20px",
-        "margin-left": `${-54 + -(this.model.level - 1) * 15}px`,
+        "margin-left": `${-54 + (this.model.level - 1) * (-15)}px`,
         "padding-left": `${65 + (this.model.level - 1) * 15}px`,
         "background-color": "#f4f6fa"
       };
